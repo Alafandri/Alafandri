@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome!</title>
     <style>
+        .bottom {
+            position:sticky ;
+            margin-top:1500% ; 
+            text-align: center;
+        }
         button {
             color: white;
             background-color: red;
@@ -23,16 +28,19 @@
             color: white;
             background-color: black;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: scroll;
         }
     </style>
 </head>
 <body>
     <h1>WELCOME!</h1>
-    <p>I like trains</p>
+    <p onclick="audio.play();">I like trains</p>
     <button onclick="audio.play();">Play</button>
     <script type="text/javascript">
         const audio = new Audio();
         audio.src = "./trains.mp3"
     </script>
+    <p>Hi yall! cool website ikr! anyways, thats it! yes. go away!</p>
+    <p class="bottom">What are you doing down here? See? Nothing interesting!</p>
 </body>
 </html>
