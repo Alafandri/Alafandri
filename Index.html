@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome!</title>
+    <style>
+        button {
+            color: white;
+            background-color: red;
+            border: 10%;
+            border-color: #ff0000;
+            border-radius: 10%;
+            outline: none;
+        }
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-size:350%;
+            margin-top: -0.5%;
+        }
+        body {
+            color: white;
+            background-color: black;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <p>araaaaa</p>
+    <h1>WELCOME!</h1>
+    <p>I like trains</p>
+    <button onclick="audio.play();">Play</button>
+    <script type="text/javascript">
+        const audio = new Audio();
+        audio.src = "./trains.mp3"
+    </script>
 </body>
 </html>
