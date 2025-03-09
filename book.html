@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A book</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .book {
+            margin-top: 110%;
+            padding-left: 10px;
+            padding-bottom: 30px;
+        }
+        .navbar ul{
+            z-index: 2;
+            list-style-type: none;
+            background-color: #191919;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+            bottom: 0;
+        }
+        .navbar a{
+            z-index: 2;
+            font-weight: bold;
+            font-size: small;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 0px;
+            margin: 0px;
+            padding: 10px;
+            display: block;
+            text-align: center;
+        }
+        .navbar {
+            z-index: 2;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .navbar a:hover{
+            z-index: 2;
+          background-color: rgb(45, 45, 45); 
+          transform: translate(5%, -5%);
+        }
+        .navbar li {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <p>Random meaningless book...</p>
+    <p class="book">.9...s.</p>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sorry.html">About</a></li>
+            <li><a href="sorry.html">Contacts</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

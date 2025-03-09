@@ -3,20 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome!</title>
+    <title>Welcome</title>
     <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
         .bottom {
+            position: absolute;
+            z-index: -1;
             position:sticky ;
+            margin-bottom: 30px;
             margin-top:1500% ; 
             text-align: center;
+            color: #fff;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 151px #0fa;
+        }
+        .bottom2 {
+            z-index: 3;
+            position:sticky;
+            float: right;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-top:1500%;
+            height: 15px;
+            color: white;
+            background-color: #191919;
+            border-color: #191919;
+            -moz-appearance:  textfield;
+            margin-top: 0%;
         }
         button {
+            font-weight: bold;
             color: white;
-            background-color: red;
+            background-color: rgb(40, 40, 40);
             border: 10%;
-            border-color: #ff0000;
+            border-color: #161616;
             border-radius: 10%;
             outline: none;
+            margin-top: 0%;
+            transition: background-color 0.2s ease-in-out,
+            border 0.2s ease-in-out 0.2s;
+        }
+        button:hover {
+            background-color: #ffffff;
+            color: black;
         }
         h1 {
             display: flex;
@@ -25,22 +65,148 @@
             margin-top: -0.5%;
         }
         body {
+            margin-top:1500% ; 
+            margin: 0px;
             color: white;
             background-color: black;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow: scroll;
+        }
+        .navbar ul{
+            z-index: 2;
+            list-style-type: none;
+            background-color: #191919;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+            bottom: 0;
+        }
+        .navbar a{
+            z-index: 2;
+            font-weight: bold;
+            font-size: small;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 0px;
+            margin: 0px;
+            padding: 10px;
+            display: block;
+            text-align: center;
+        }
+        .navbar {
+            z-index: 2;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .navbar a:hover{
+            z-index: 2;
+          background-color: rgb(45, 45, 45); 
+          transform: translate(5%, -5%);
+        }
+        .big {
+            z-index: 1;
+            margin: 10px;
+            margin-bottom: 10px;
+        }
+        .big:hover {
+            transform: translate(1%, -1%);
+        }
+        .navbar li {
+            float: left;
+        }
+        .fit {
+            z-index: -1;
+            max-width: 90%;
+            max-height: 90%;
+            margin-top: -5%;
+            margin-left: 5%;
+        }
+        .move {
+            padding-left: 10px;
+            margin-top: -10px;
+        }
+        .picture {
+            z-index: -1;
+            max-width: 25%;
+            max-height: 25%;
+            padding-left: 10px;
+            border-radius: 10%;
+        }
+        .picture:hover {
+            transform: translate(1%, 1%);
+            z-index: -1;
+        }
+        #shadowBox {
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.2);
+            /* Black w/opacity/see-through */
+            border: 3px solid;
+        }
+
+        .rainbow {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 32px;
+            font-family: monospace;
+            letter-spacing: 5px;
+        }
+        .rainbow_text_animated {
+            background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow_animation 6s ease-in-out infinite;
+            background-size: 400% 100%;
+        }
+
+        @keyframes rainbow_animation {
+            0%,100% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 100% 0;
+            }
+        }
+        .other {
+            align-self: center;
+            margin-top: 1500%;
+        }
+        .fit2 {
+            z-index: -1;
+            max-width: 90%;
+            max-height: 90%;
+            margin-top: 500%;
+            margin-left: 5%;
         }
     </style>
 </head>
 <body>
-    <h1>WELCOME!</h1>
-    <p onclick="audio.play();">I like trains</p>
-    <button onclick="audio.play();">Play</button>
-    <script type="text/javascript">
-        const audio = new Audio();
-        audio.src = "./trains.mp3"
-    </script>
-    <p>Hi yall! cool website ikr! anyways, thats it! yes. go away!</p>
+    <marquee class="neonText">Hi! How are you?</marquee>
+    <h1 class="rainbow_text_animated">WELCOME!</h1>
+    <a href="book.html"><img src="book.png" class="fit" alt="You arent supposed to see this!"></a>
+    <h2 class="move">HELLO!</h2>
+    <p class="move">Hi! I am <span class="rainbow_text_animated">Alafandri</span>! And this is my website where you can learn more about me!</p>
+    <nav class="navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="sorry.html">About</a></li>
+            <li><a href="sorry.html">Contacts</a></li>
+        </ul>
+    </nav>
+    <button onclick="sound();" class="big"><span class="button">Play</span></button>
+    <script src="Code1.js"></script>
+    <p class="move">I like trains!</p>
+    <br>
+    <h2 class="move">ABOUT ME</h2>
+    <p class="move">
+    Lorem Ipsum Dolor Sit Amet Consectetur adipisicing elit. Sapiente ab dolorum expedita libero corporis unde nemo doloremque, quis deleniti assumenda magni quisquam tenetur recusandae fuga. Expedita aut doloremque quidem nobis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore unde fugiat veniam eos laboriosam cupiditate dolor, atque reiciendis perferendis nihil, nisi hic voluptatum blanditiis vel maiores, perspiciatis accusantium consequatur odit.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adiuva nos. Haec progressio nos omnes necat. Desine hoc propositum. Utere codice quem in sex primis litteris capitalibus in hoc textu habes. uti in programmatis ad prohibendum. magnam facere, accusantium illum molestias aliquid vitae omnis perspiciatis blanditiis similique! Nobis, totam.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vel quisquam facilis possimus optio et eligendi, maxime voluptates obcaecati voluptatem, non, voluptas quam. Molestias, suscipit? Ipsa in voluptate qui quam.</p>
+    <a href="wow.html"><img src="pfp.png" class="picture" alt="You arent supposed to see this!"></a>
+    <img src="dragondev.png" alt="He's just a chill guy!" class="fit2">
+    <p class="other"><center>meow</center></p>
     <p class="bottom">What are you doing down here? See? Nothing interesting!</p>
 </body>
 </html>
